@@ -1,0 +1,5 @@
+# Extensions in this plugin
+# NB: "component" currently maps to modules, not "symbols" so make sure to "export default"
+extensions:
+#  - component: components/SomeComponent
+#    extensionPoint: some.extension.point
