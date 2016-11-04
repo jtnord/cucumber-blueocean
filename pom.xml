@@ -1,27 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>2.10</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.jenkins-ci.plugins</groupId>
+		<artifactId>plugin</artifactId>
+		<version>2.10</version>
+	</parent>
+
+	<groupId>io.jenkins.plugins.cucumber</groupId>
+	<artifactId>cucumber-blueocean</artifactId>
+	<name>Cucumber support for Blue Ocean</name>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>hpi</packaging>
+
+	<url>https://wiki.jenkins-ci.org/display/JENKINS/YOUR_WIKI_URL</url>
+  <inceptionYear>2016</inceptionYear>
   
+	<properties>
+		<jenkins.version>2.7.1</jenkins.version>
+		<node.version>5.8.0</node.version>
+		<npm.version>3.7.3</npm.version>
+	</properties>
 
-  <name>cucumber-blueocean</name>
-  <groupId>io.jenkins.plugins.cucumber</groupId>
-  <version>0.0.1-SNAPSHOT</version>
+	<developers>
+		<developer>
+			<id>teilo</id>
+			<name>James Nord</name>
+		</developer>
+	</developers>
 
-  <artifactId>cucumber-blueocean</artifactId>
-  <packaging>hpi</packaging>
+	<scm>
+		<connection>scm:git:git://git@github.com/jenkinsci/cucumber-blueocean-plugin.git</connection>
+		<developerConnection>scm:git:git@github.com:jenkinsci/cucumber-blueocean-plugin.git</developerConnection>
+		<url>https://github.com/jenkinsci/cucumber-blueocean-plugin/</url>
+		<tag>HEAD</tag>
+	</scm>
 
-  <url>https://wiki.jenkins-ci.org/display/JENKINS/YOUR_WIKI_URL</url>
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>https://github.com/jenkinsci/cucumber-blueocean-plugin/blob/master/LICENCE.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 
-  <properties>
-    <jenkins.version>2.7.1</jenkins.version>
-    <node.version>5.8.0</node.version>
-    <npm.version>3.7.3</npm.version>
-  </properties>
-
+	<dependencies>
+		<dependency>
+			<groupId>io.jenkins.blueocean</groupId>
+			<artifactId>blueocean</artifactId>
+			<version>1.0.0-b07-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.jenkins-ci.plugins</groupId>
+			<artifactId>cucumber-testresult-plugin</artifactId>
+			<version>0.10-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
