@@ -17,8 +17,8 @@
 	<packaging>hpi</packaging>
 
 	<url>https://wiki.jenkins-ci.org/display/JENKINS/YOUR_WIKI_URL</url>
-  <inceptionYear>2016</inceptionYear>
-  
+	<inceptionYear>2016</inceptionYear>
+
 	<properties>
 		<jenkins.version>2.7.1</jenkins.version>
 		<node.version>5.8.0</node.version>
